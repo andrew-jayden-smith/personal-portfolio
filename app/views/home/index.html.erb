@@ -1,0 +1,151 @@
+
+<!-- app/views/home/index.html.erb -->
+
+<div class="container">
+
+<nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+  <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
+  
+  <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <header class="site-header">
+    <div class="intro-text">
+        I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+    </div>
+  </header>
+
+
+  <main>
+
+    <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
+        <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
+    </div>
+
+
+    <section id="about" class="intro-text">
+        <p>
+            I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
+        </p>
+        <p>
+            Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
+        </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
+        </li>
+        <li>
+          <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
+        </li>
+        <li>
+          <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
+        </li>
+      </ul>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>
+        <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out via email or connect on LinkedIn.</p>
+      <ul>
+        <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
+        <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+  </footer>
+</div>
+
+<style>
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .site-header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .navbar a {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .intro-text {
+  padding: 2.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@media (min-width: 1024px) {
+  .intro-text {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.highlight-name {
+  color: #F54927; /* Orange */
+}
+
+/* Fade in/up */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
