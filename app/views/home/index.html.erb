@@ -1,78 +1,77 @@
-
-<!-- app/views/home/index.html.erb -->
+<canvas id="animation-canvas" width="1920" height="1080" style="display: block; background: white;"></canvas>
 
 <div class="container">
 
-<nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-  <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
-  
-  <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+    <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
+    
+    <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav>
 
 
-  <header class="site-header">
-    <div class="intro-text">
-        I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
-    </div>
-  </header>
+    <header class="site-header">
+        <div class="intro-text">
+            I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+        </div>
+    </header>
 
 
-  <main>
+    <main>
 
-    <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
-        <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
-    </div>
+        <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
+            <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
+        </div>
 
 
-    <section id="about" class="intro-text">
+        <section id="about" class="intro-text">
+            <p>
+                I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
+            </p>
+            <p>
+                Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
+            </p>
+        </section>
+
+        <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+            <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
+            </li>
+            <li>
+            <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
+            </li>
+            <li>
+            <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
+            </li>
+        </ul>
+        </section>
+
+        <section id="resume">
+        <h2>Resume</h2>
         <p>
-            I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
+            <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
         </p>
-        <p>
-            Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
-        </p>
-    </section>
+        </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
-        </li>
-        <li>
-          <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
-        </li>
-        <li>
-          <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
-        </li>
-      </ul>
-    </section>
+        <section id="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or connect on LinkedIn.</p>
+        <ul>
+            <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
+            <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
+        </ul>
+        </section>
+    </main>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>
-        <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
-      </p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out via email or connect on LinkedIn.</p>
-      <ul>
-        <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
-        <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+    </footer>
 </div>
 
 <style>
@@ -148,4 +147,205 @@
   }
 }
 
+#loading-screen {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+}
+
 </style>
+
+<script>
+const canvas = document.getElementById('animation-canvas');
+const ctx = canvas.getContext('2d');
+
+let topRectY;
+let bottomRectY;
+
+let collide = false;
+
+let fadeControl = 255;
+const fadeSpeed = 30;
+let rectStrokeWeight = 7;
+
+let rectWidth = 0;
+let rectHeight = 0;
+const maxW = 120;
+const maxH = 100;
+const growSpeed = 30;
+
+const topRectEndY = 85;
+const bottomRectEndY = 150;
+
+const smallRects = [
+  {x: -1, y: -0.5, delay: 0},
+  {x: 1, y: -0.3, delay: 30},
+  {x: -0.6, y: 0.4, delay: 60},
+  {x: 0.7, y: 0.6, delay: 100},
+  {x: 0, y: 0, delay: 150}
+];
+
+const maxSlide = 500;
+const slideSpeed = 0.5;
+const smallRectW = 50;
+const smallRectH = 80;
+const baseOffset = 200;
+
+let slideAmounts = smallRects.map(() => 0);
+let frameCountSinceCollision = 0;
+let slideAmount = 0;
+
+// Helper: draw rounded rectangle
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+// Initialize positions
+function setup() {
+  topRectY = topRectEndY - 100;
+  bottomRectY = bottomRectEndY + 100;
+}
+
+// Main animation loop
+function draw() {
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Background white
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Text "DREW SMITH"
+  ctx.font = '75px Arial';
+  ctx.fillStyle = 'black';
+  ctx.lineWidth = 0.2;
+  ctx.strokeStyle = 'black';
+  ctx.fillText('DREW SMITH', 20, 138);
+
+  // Text "DS"
+  ctx.font = '160px Arial';
+  ctx.fillText('DS', 590, 200);
+
+  // Slide topRectY down to end
+  if (topRectY < topRectEndY) {
+    topRectY += 7;
+    if (topRectY > topRectEndY) topRectY = topRectEndY;
+  }
+
+  // Slide bottomRectY up to end
+  if (bottomRectY > bottomRectEndY) {
+    bottomRectY -= 7;
+    if (bottomRectY < bottomRectEndY) bottomRectY = bottomRectEndY;
+  }
+
+  // Collision check
+  if (topRectY === topRectEndY && bottomRectY === bottomRectEndY) {
+    collide = true;
+    frameCountSinceCollision++;
+  } else {
+    collide = false;
+    frameCountSinceCollision = 0;
+  }
+
+  // Draw top rect - white fill, black stroke
+  ctx.fillStyle = 'white';
+  ctx.lineWidth = 7;
+  ctx.strokeStyle = 'black';
+  roundRect(ctx, 520, topRectY, 60, 50, 9);
+  ctx.fill();
+  ctx.stroke();
+
+  // Draw bottom rect - transparent fill, grey stroke
+  ctx.fillStyle = 'transparent';
+  ctx.strokeStyle = 'rgba(150,150,150,1)';
+  ctx.lineWidth = 7;
+  roundRect(ctx, 520, bottomRectY, 60, 50, 9);
+  ctx.stroke();
+
+  const centerX = 520 + 30; // 60/2
+  const topCenterY = topRectEndY - 2.5; // 5/2
+  const bottomCenterY = bottomRectEndY + 45; // 90/2
+
+  if (collide) {
+    if (rectWidth < maxW) rectWidth += growSpeed;
+    if (rectHeight < maxH) rectHeight += growSpeed;
+
+    // Map rectStrokeWeight from 7 to 10 linearly
+    rectStrokeWeight = 7 + (rectWidth / maxW) * 3;
+
+    if (rectWidth >= maxW && rectHeight >= maxH) {
+      fadeControl -= fadeSpeed;
+      if (fadeControl < 0) fadeControl = 0;
+    }
+
+    ctx.lineWidth = rectStrokeWeight;
+    ctx.strokeStyle = `rgba(150, 150, 150, ${fadeControl / 255})`;
+    ctx.fillStyle = 'transparent';
+
+    roundRect(ctx, centerX - rectWidth / 2, topCenterY - rectHeight / 2, rectWidth, rectHeight, 9);
+    ctx.stroke();
+
+    roundRect(ctx, centerX - rectWidth / 2, bottomCenterY - rectHeight / 2, rectWidth, rectHeight, 9);
+    ctx.stroke();
+
+  } else {
+    rectWidth = 0;
+    rectHeight = 0;
+    rectStrokeWeight = 7;
+    fadeControl = 255;
+  }
+
+  if (collide) {
+    if (slideAmount < maxSlide) slideAmount += slideSpeed;
+
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = `rgba(150, 150, 150, ${fadeControl / 255})`;
+    ctx.fillStyle = 'transparent';
+
+    const centerY = (topRectEndY + bottomRectEndY + 50) / 2;
+
+    smallRects.forEach(({x, y, delay}, i) => {
+      if (frameCountSinceCollision > delay) {
+        if (slideAmounts[i] < maxSlide) {
+          slideAmounts[i] += slideSpeed * 0.3;  // slower slide
+          if (slideAmounts[i] > maxSlide) slideAmounts[i] = maxSlide;
+        }
+      }
+
+      const posX = centerX + (baseOffset + slideAmounts[i]) * x;
+      const posY = centerY + (baseOffset + slideAmounts[i]) * y;
+
+      roundRect(ctx, posX, posY, smallRectW, smallRectH, 5);
+      ctx.stroke();
+    });
+
+  } else {
+    slideAmount = 0;
+    slideAmounts = smallRects.map(() => 0);
+  }
+
+  requestAnimationFrame(draw);
+
+  
+}
+
+// Start everything
+setup();
+draw();
+
+
+
+</script>
