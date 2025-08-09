@@ -177,15 +177,16 @@ const maxW = 120;
 const maxH = 100;
 const growSpeed = 30;
 
-const topRectEndY = 85;
-const bottomRectEndY = 150;
+const topRectEndY = 348;
+const bottomRectEndY = 410;
 
+// Small Rect Explosion
 const smallRects = [
-  {x: -1, y: -0.5, delay: 0},
-  {x: 1, y: -0.3, delay: 30},
-  {x: -0.6, y: 0.4, delay: 60},
-  {x: 0.7, y: 0.6, delay: 100},
-  {x: 0, y: 0, delay: 150}
+  {x: 0.5, y: -0.5, delay: 30},
+  {x: 0, y: -1, delay: 60},
+  {x: -1, y: 0.6, delay: 90},
+  {x: 0, y: 1, delay: 120},
+  {x: -1, y: -1, delay: 150} 
 ];
 
 const maxSlide = 500;
@@ -193,6 +194,9 @@ const slideSpeed = 0.5;
 const smallRectW = 50;
 const smallRectH = 80;
 const baseOffset = 200;
+
+const targetDuration = 180; // frames (3 seconds at 60 FPS)
+const targetSpeed = maxSlide / targetDuration;
 
 let slideAmounts = smallRects.map(() => 0);
 let frameCountSinceCollision = 0;
@@ -213,10 +217,10 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-// Initialize positions
+// Initialize positions for rects in logo
 function setup() {
-  topRectY = topRectEndY - 100;
-  bottomRectY = bottomRectEndY + 100;
+  topRectY = topRectEndY - 150;
+  bottomRectY = bottomRectEndY + 150;
 }
 
 // Main animation loop
@@ -233,19 +237,19 @@ function draw() {
   ctx.fillStyle = 'black';
   ctx.lineWidth = 0.2;
   ctx.strokeStyle = 'black';
-  ctx.fillText('DREW SMITH', 20, 138);
+  ctx.fillText('DREW SMITH', 300, 400);
 
   // Text "DS"
   ctx.font = '160px Arial';
-  ctx.fillText('DS', 590, 200);
+  ctx.fillText('DS', 880, 460);
 
-  // Slide topRectY down to end
+  // Slide topRectY down
   if (topRectY < topRectEndY) {
     topRectY += 7;
     if (topRectY > topRectEndY) topRectY = topRectEndY;
   }
 
-  // Slide bottomRectY up to end
+  // Slide bottomRectY up
   if (bottomRectY > bottomRectEndY) {
     bottomRectY -= 7;
     if (bottomRectY < bottomRectEndY) bottomRectY = bottomRectEndY;
@@ -260,22 +264,22 @@ function draw() {
     frameCountSinceCollision = 0;
   }
 
-  // Draw top rect - white fill, black stroke
+  // Draw top rect - black
   ctx.fillStyle = 'white';
   ctx.lineWidth = 7;
   ctx.strokeStyle = 'black';
-  roundRect(ctx, 520, topRectY, 60, 50, 9);
+  roundRect(ctx, 800, topRectY, 60, 50, 9);
   ctx.fill();
   ctx.stroke();
 
-  // Draw bottom rect - transparent fill, grey stroke
+  // Draw bottom rect - grey
   ctx.fillStyle = 'transparent';
   ctx.strokeStyle = 'rgba(150,150,150,1)';
   ctx.lineWidth = 7;
-  roundRect(ctx, 520, bottomRectY, 60, 50, 9);
+  roundRect(ctx, 800, bottomRectY, 60, 50, 9);
   ctx.stroke();
 
-  const centerX = 520 + 30; // 60/2
+  const centerX = 800 + 30; // 60/2
   const topCenterY = topRectEndY - 2.5; // 5/2
   const bottomCenterY = bottomRectEndY + 45; // 90/2
 
@@ -319,11 +323,18 @@ function draw() {
 
     smallRects.forEach(({x, y, delay}, i) => {
       if (frameCountSinceCollision > delay) {
-        if (slideAmounts[i] < maxSlide) {
-          slideAmounts[i] += slideSpeed * 0.3;  // slower slide
-          if (slideAmounts[i] > maxSlide) slideAmounts[i] = maxSlide;
-        }
-      }
+    if (slideAmounts[i] < maxSlide) {
+      // progress 0 → 1
+      let progress = slideAmounts[i] / maxSlide;
+
+      // Ease-out factor: starts fast, slows at end
+      let easedSpeed = (1 - progress) * 3; // multiply by 3 for visibility
+
+      slideAmounts[i] += slideSpeed * easedSpeed; 
+
+      if (slideAmounts[i] > maxSlide) slideAmounts[i] = maxSlide;
+    }
+    }
 
       const posX = centerX + (baseOffset + slideAmounts[i]) * x;
       const posY = centerY + (baseOffset + slideAmounts[i]) * y;
@@ -339,13 +350,9 @@ function draw() {
 
   requestAnimationFrame(draw);
 
-  
 }
-
 // Start everything
 setup();
 draw();
-
-
 
 </script>
