@@ -1,77 +1,80 @@
 <canvas id="animation-canvas" width="1920" height="1080" style="display: block; background: white;"></canvas>
 
-<div class="container">
+<div id="main-content" style="display:none;">
 
-    <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-    <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
-    
-    <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    </nav>
+  <div class="container">
 
-
-    <header class="site-header">
-        <div class="intro-text">
-            I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
-        </div>
-    </header>
+      <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+      <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
+      
+      <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      </nav>
 
 
-    <main>
+      <header class="site-header">
+          <div class="intro-text">
+              I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+          </div>
+      </header>
 
-        <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
-            <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
-        </div>
+
+      <main>
+
+          <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
+              <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
+          </div>
 
 
-        <section id="about" class="intro-text">
-            <p>
-                I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
-            </p>
-            <p>
-                Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
-            </p>
-        </section>
+          <section id="about" class="intro-text">
+              <p>
+                  I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
+              </p>
+              <p>
+                  Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
+              </p>
+          </section>
 
-        <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-            <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
-            </li>
-            <li>
-            <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
-            </li>
-            <li>
-            <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
-            </li>
-        </ul>
-        </section>
+          <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+              <li>
+              <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
+              </li>
+              <li>
+              <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
+              </li>
+              <li>
+              <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
+              </li>
+          </ul>
+          </section>
 
-        <section id="resume">
-        <h2>Resume</h2>
-        <p>
-            <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
-        </p>
-        </section>
+          <section id="resume">
+          <h2>Resume</h2>
+          <p>
+              <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
+          </p>
+          </section>
 
-        <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out via email or connect on LinkedIn.</p>
-        <ul>
-            <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
-            <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
-        </ul>
-        </section>
-    </main>
+          <section id="contact">
+          <h2>Contact</h2>
+          <p>Feel free to reach out via email or connect on LinkedIn.</p>
+          <ul>
+              <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
+              <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
+          </ul>
+          </section>
+      </main>
 
-    <footer>
-        <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
-    </footer>
+      <footer>
+          <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+      </footer>
+  </div>
 </div>
 
 <style>
@@ -157,6 +160,10 @@
 }
 
 </style>
+
+<audio id="intro-sound" preload="auto">
+  <source src="<%= asset_path('nintendo_ds_intro.mp3') %>" type="audio/mpeg">
+</audio>
 
 <script>
 const canvas = document.getElementById('animation-canvas');
@@ -351,8 +358,31 @@ function draw() {
   requestAnimationFrame(draw);
 
 }
+
+window.addEventListener('load', () => {
+  const introSound = document.getElementById('intro-sound');
+  if (introSound) {
+    introSound.play().catch(err => {
+      console.warn('Autoplay blocked:', err);
+      // You can optionally silently ignore or show a message here
+    });
+  }
+});
+
+
 // Start everything
 setup();
 draw();
+
+// Show main content after ~3 seconds
+setTimeout(() => {
+  const canvasEl = document.getElementById('animation-canvas');
+  canvasEl.classList.add('fade-out');
+  
+  setTimeout(() => {
+    canvasEl.style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  }, 1000); 
+}, 1000);
 
 </script>
