@@ -3,33 +3,74 @@
 <div id="main-content" style="display:none;">
 
       <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: #6f8d99ff;">
-      <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
-      
-      <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
-          <div id="digital-time" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff;"></div>
-          <div id="date-display" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff"></div>
-          
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      </nav>
-
+        <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
+        <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
+            <div id="digital-time" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff;"></div>
+            <div id="date-display" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff"></div>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>  
 
       <header class="site-header">
-          <div class="intro-text">
-              I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #f0f0f0 ;">
+          <!-- Headshot -->
+          <div >
+            <div style="flex-shrink: 0;">
+              <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block;") %>
+            </div>
           </div>
+          <!-- About text -->
+          <div style="flex: 1;">
+            <p>
+              <div class="intro-text">
+                  I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+              </div>
+            </p>
+          </div>
+        </section>
+      </header>
+
+      <section id="about" class="intro-text" 
+        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0;">
+
+        <!-- Projects -->
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%;">
+          <div class="intro-text">
+            PROJECTS
+          </div>
+        </div>
+
+        <!-- Resume -->
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%;">
+          <div class="intro-text">
+            DS Download Resume
+          </div>
+        </div>
+      </section>
+
+      <header class="site-header" style="padding-top: 5px;">
+        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #f0f0f0 ;">
+          <!-- Headshot -->
+          <div >
+            <div style="flex-shrink: 0; width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block;">
+              
+            </div>
+          </div>
+          <!-- About text -->
+          <div style="flex: 1;">
+            <p>
+              <div class="intro-text">
+                  
+              </div>
+            </p>
+          </div>
+        </section>
       </header>
 
 
+
       <main>
-
-          <div style="display: flex; justify-content: center; align-items: center; height: 40vh;">
-              <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 350px; height: 350px; border-radius: 50%; object-fit: cover;") %>
-          </div>
-
-
           <section id="about" class="intro-text">
               <p>
                   I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
@@ -99,18 +140,21 @@ body, html {
   padding: 0;
 }
 
+
+
 body {
   /* Light gray background with grid lines */
   background-color: #f0f0f0;
   background-image:
     linear-gradient(to right, #ccc 1px, transparent 1px),
     linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: 80px 80px; /* size of each grid cell */
+  background-size: 280px 280px; /* size of each grid cell */
 }
 
   .site-header {
     text-align: center;
-    padding: 2rem 0;
+    padding: 5px;
+    padding-top: 40px;
   }
 
   .navbar ul {
@@ -145,7 +189,7 @@ body {
   }
 
   .intro-text {
-  padding: 2.5rem;
+  
   margin-top: 1rem;
   font-size: 1rem;
   font-weight: 800;
@@ -153,6 +197,8 @@ body {
   transform: translateY(30px);
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 0.5s;
+  padding: 5px;
+  padding-top: 40px;
 }
 
 @media (min-width: 1024px) {
