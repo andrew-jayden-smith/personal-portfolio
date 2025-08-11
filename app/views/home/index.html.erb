@@ -2,18 +2,26 @@
 
 <div id="main-content" style="display:none;">
 
-      <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: #6f8d99ff;">
-        <%= image_tag("dsLogo.png", alt: "Logo", style: "width: 70px; height: 70px; border-radius: 50%; object-fit: cover;") %>
-        <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px;">
-            <div id="digital-time" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff;"></div>
-            <div id="date-display" style="font-weight: bold; font-size: 1.6rem; text-align: right; color:#ffffff"></div>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>  
+  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 10px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light', sans-serif; font-weight: bold;">
+    <!-- Left group -->
+    <ul class="nav-text" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;">
+      <li style="color: #ffffff; font-weight: bold; line-height: 70px;">User</li>
+    </ul>
+
+    <!-- Right group -->
+    <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px; align-items: center;">
+      <li id="digital-time" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
+      <li id="date-display" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
+      <li>
+        <%= image_tag("battery.png", alt: "Battery", style: "width: 40px; height: 40px; object-fit: contain;") %>
+      </li>
+    </ul>
+  </nav>
+
+
 
       <header class="site-header">
-        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #f0f0f0 ;">
+        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3; font-family: 'Copperplate Gothic Light', sans-serif;">
           <!-- Headshot -->
           <div >
             <div style="flex-shrink: 0;">
@@ -21,7 +29,7 @@
             </div>
           </div>
           <!-- About text -->
-          <div style="flex: 1;">
+          <div style="flex: 1; max-width: 600px; padding-left: 100px;">
             <p>
               <div class="intro-text">
                   I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
@@ -32,36 +40,36 @@
       </header>
 
       <section id="about" class="intro-text" 
-        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0;">
+        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light', sans-serif;">
 
         <!-- Projects -->
-        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%; background-color: #D3D3D3;">
           <div class="intro-text">
             PROJECTS
           </div>
         </div>
 
         <!-- Resume -->
-        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%;">
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%; background-color: #D3D3D3;">
           <div class="intro-text">
             DS Download Resume
           </div>
         </div>
       </section>
 
-      <header class="site-header" style="padding-top: 5px;">
-        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #f0f0f0 ;">
-          <!-- Headshot -->
+      <header class="site-header" style="padding-top: 5px; font-family: 'Copperplate Gothic Light', sans-serif;">
+        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3;">
+          <!-- Phone -->
           <div >
-            <div style="flex-shrink: 0; width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block;">
-              
+            <div style="flex-shrink: 0; width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #E3E3E3;">
+                <%= image_tag("phone.webp", alt: "Phone", style: "width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #D3D3D3;") %>
             </div>
           </div>
           <!-- About text -->
           <div style="flex: 1;">
             <p>
               <div class="intro-text">
-                  
+                  Contact Me
               </div>
             </p>
           </div>
@@ -131,7 +139,7 @@
 <style>
   .container {
 
-    font-family: Arial, sans-serif;
+    font-family: "Copperplate Gothic Light", sans-serif;
   }
 
 body, html {
