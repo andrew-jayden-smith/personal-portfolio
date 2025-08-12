@@ -1,0 +1,491 @@
+<canvas id="animation-canvas" width="1920" height="1080" style="display: block; background: white;"></canvas>
+
+<div id="main-content" style="display:none;">
+
+  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 10px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light', sans-serif; font-weight: bold;">
+    <!-- Left group -->
+    <ul class="nav-text" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;">
+      <li style="color: #ffffff; font-weight: bold; line-height: 70px;">User</li>
+    </ul>
+
+    <!-- Right group -->
+    <ul class="nav-text" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 20px; align-items: center;">
+      <li id="digital-time" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
+      <li id="date-display" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
+      <li>
+        <%= image_tag("battery.png", alt: "Battery", style: "width: 40px; height: 40px; object-fit: contain;") %>
+      </li>
+    </ul>
+  </nav>
+
+
+
+<header class="site-header">
+  <%= link_to about_path, style: "text-decoration: none; color: inherit; display: block;" do %>
+    <section id="about" class="intro-text" 
+      style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3; font-family: 'Copperplate Gothic Light', sans-serif; cursor: pointer;">
+      
+      <!-- Headshot -->
+      <div>
+        <div style="flex-shrink: 0;">
+          <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block;") %>
+        </div>
+      </div>
+
+      <!-- About text -->
+      <div style="flex: 1; max-width: 600px; padding-left: 100px;">
+        <p>
+          <div class="intro-text">
+            I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+          </div>
+        </p>
+      </div>
+    </section>
+  <% end %>
+</header>
+
+
+      <section id="about" class="intro-text" 
+        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light', sans-serif;">
+
+        <!-- Projects -->
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%; background-color: #D3D3D3;">
+          <div class="intro-text">
+            PROJECTS
+          </div>
+        </div>
+
+        <!-- Resume -->
+        <div style="flex: 1; border: 2px solid black; background-color: white; display: flex; justify-content: center; align-items: center; height: 100%; background-color: #D3D3D3;">
+          <div class="intro-text">
+            DS Download Resume
+          </div>
+        </div>
+      </section>
+
+      <header class="site-header" style="padding-top: 5px; font-family: 'Copperplate Gothic Light', sans-serif;">
+        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3;">
+          <!-- Phone -->
+          <div >
+            <div style="flex-shrink: 0; width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #E3E3E3;">
+                <%= image_tag("phone.webp", alt: "Phone", style: "width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #D3D3D3;") %>
+            </div>
+          </div>
+          <!-- About text -->
+          <div style="flex: 1;">
+            <p>
+              <div class="intro-text">
+                  Contact Me
+              </div>
+            </p>
+          </div>
+        </section>
+      </header>
+
+
+
+      <main>
+          <section id="about" class="intro-text">
+              <p>
+                  I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
+              </p>
+              <p>
+                  Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
+              </p>
+          </section>
+
+          <section id="projects">
+          <h2>Projects</h2>
+          <ul>
+              <li>
+              <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
+              </li>
+              <li>
+              <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
+              </li>
+              <li>
+              <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
+              </li>
+          </ul>
+          </section>
+
+          <section id="resume">
+          <h2>Resume</h2>
+          <p>
+              <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
+          </p>
+          </section>
+
+        <section class="intro-text" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <a>
+              <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
+            </a>
+            <a>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
+            </a>
+        </section>
+
+          <section id="contact">
+          <h2>Contact</h2>
+          <p>Feel free to reach out via email or connect on LinkedIn.</p>
+          <ul>
+              <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
+              <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
+          </ul>
+          </section>
+      </main>
+
+      <footer>
+          <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+      </footer>
+
+</div>
+
+<style>
+  .container {
+
+    font-family: "Copperplate Gothic Light", sans-serif;
+  }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body {
+  /* Light gray background with grid lines */
+  background-color: #f0f0f0;
+  background-image:
+    linear-gradient(to right, #ccc 1px, transparent 1px),
+    linear-gradient(to bottom, #ccc 1px, transparent 1px);
+  background-size: 280px 280px; /* size of each grid cell */
+}
+
+  .site-header {
+    text-align: center;
+    padding: 5px;
+    padding-top: 40px;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    color: #000000;
+  }
+  
+  .navbar a {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  section {
+    margin-top: 3rem;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .intro-text {
+  
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+  padding: 5px;
+  padding-top: 40px;
+}
+
+@media (min-width: 1024px) {
+  .intro-text {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.highlight-name {
+  color: #F54927; /* Orange */
+}
+
+/* Fade in/up */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#loading-screen {
+  transition: opacity 1s ease;
+  opacity: 1;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+}
+
+</style>
+
+<audio id="intro-sound" preload="auto">
+  <source src="<%= asset_path('nintendo_ds_intro.mp3') %>" type="audio/mpeg">
+</audio>
+
+<script>
+const canvas = document.getElementById('animation-canvas');
+const ctx = canvas.getContext('2d');
+
+let topRectY;
+let bottomRectY;
+
+let collide = false;
+
+let fadeControl = 255;
+const fadeSpeed = 30;
+let rectStrokeWeight = 7;
+
+let rectWidth = 0;
+let rectHeight = 0;
+const maxW = 120;
+const maxH = 100;
+const growSpeed = 30;
+
+const topRectEndY = 348;
+const bottomRectEndY = 410;
+
+// Small Rect Explosion
+const smallRects = [
+  {x: 0.5, y: -0.5, delay: 30},
+  {x: 0, y: -1, delay: 60},
+  {x: -1, y: 0.6, delay: 90},
+  {x: 0, y: 1, delay: 120},
+  {x: -1, y: -1, delay: 150} 
+];
+
+const maxSlide = 500;
+const slideSpeed = 0.5;
+const smallRectW = 50;
+const smallRectH = 80;
+const baseOffset = 200;
+
+const targetDuration = 180; // frames (3 seconds at 60 FPS)
+const targetSpeed = maxSlide / targetDuration;
+
+let slideAmounts = smallRects.map(() => 0);
+let frameCountSinceCollision = 0;
+let slideAmount = 0;
+
+// Helper: draw rounded rectangle
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+// Initialize positions for rects in logo
+function setup() {
+  topRectY = topRectEndY - 150;
+  bottomRectY = bottomRectEndY + 150;
+}
+
+// Main animation loop
+function draw() {
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Background white
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Text "DREW SMITH"
+  ctx.font = '75px Arial';
+  ctx.fillStyle = 'black';
+  ctx.lineWidth = 0.2;
+  ctx.strokeStyle = 'black';
+  ctx.fillText('DREW SMITH', 300, 400);
+
+  // Text "DS"
+  ctx.font = '160px Arial';
+  ctx.fillText('DS', 880, 460);
+
+  // Slide topRectY down
+  if (topRectY < topRectEndY) {
+    topRectY += 7;
+    if (topRectY > topRectEndY) topRectY = topRectEndY;
+  }
+
+  // Slide bottomRectY up
+  if (bottomRectY > bottomRectEndY) {
+    bottomRectY -= 7;
+    if (bottomRectY < bottomRectEndY) bottomRectY = bottomRectEndY;
+  }
+
+  // Collision check
+  if (topRectY === topRectEndY && bottomRectY === bottomRectEndY) {
+    collide = true;
+    frameCountSinceCollision++;
+  } else {
+    collide = false;
+    frameCountSinceCollision = 0;
+  }
+ 
+  // Draw top rect - black
+  ctx.fillStyle = 'white';
+  ctx.lineWidth = 7;
+  ctx.strokeStyle = 'black';
+  roundRect(ctx, 800, topRectY, 60, 50, 9);
+  ctx.fill();
+  ctx.stroke();
+
+  // Draw bottom rect - grey
+  ctx.fillStyle = 'transparent';
+  ctx.strokeStyle = 'rgba(150,150,150,1)';
+  ctx.lineWidth = 7;
+  roundRect(ctx, 800, bottomRectY, 60, 50, 9);
+  ctx.stroke();
+
+  const centerX = 800 + 30; // 60/2
+  const topCenterY = topRectEndY - 2.5; // 5/2
+  const bottomCenterY = bottomRectEndY + 45; // 90/2
+
+  if (collide) {
+    if (rectWidth < maxW) rectWidth += growSpeed;
+    if (rectHeight < maxH) rectHeight += growSpeed;
+
+    // Map rectStrokeWeight from 7 to 10 linearly
+    rectStrokeWeight = 7 + (rectWidth / maxW) * 3;
+
+    if (rectWidth >= maxW && rectHeight >= maxH) {
+      fadeControl -= fadeSpeed;
+      if (fadeControl < 0) fadeControl = 0;
+    }
+
+    ctx.lineWidth = rectStrokeWeight;
+    ctx.strokeStyle = `rgba(150, 150, 150, ${fadeControl / 255})`;
+    ctx.fillStyle = 'transparent';
+
+    roundRect(ctx, centerX - rectWidth / 2, topCenterY - rectHeight / 2, rectWidth, rectHeight, 9);
+    ctx.stroke();
+
+    roundRect(ctx, centerX - rectWidth / 2, bottomCenterY - rectHeight / 2, rectWidth, rectHeight, 9);
+    ctx.stroke();
+
+  } else {
+    rectWidth = 0;
+    rectHeight = 0;
+    rectStrokeWeight = 7;
+    fadeControl = 255;
+  }
+
+  if (collide) {
+    if (slideAmount < maxSlide) slideAmount += slideSpeed;
+
+    ctx.lineWidth = 7;
+    ctx.strokeStyle = `rgba(150, 150, 150, ${fadeControl / 255})`;
+    ctx.fillStyle = 'transparent';
+
+    const centerY = (topRectEndY + bottomRectEndY + 50) / 2;
+
+    smallRects.forEach(({x, y, delay}, i) => {
+      if (frameCountSinceCollision > delay) {
+    if (slideAmounts[i] < maxSlide) {
+      // progress 0 → 1
+      let progress = slideAmounts[i] / maxSlide;
+
+      // Ease-out factor: starts fast, slows at end
+      let easedSpeed = (1 - progress) * 3; // multiply by 3 for visibility
+
+      slideAmounts[i] += slideSpeed * easedSpeed; 
+
+      if (slideAmounts[i] > maxSlide) slideAmounts[i] = maxSlide;
+    }
+    }
+
+      const posX = centerX + (baseOffset + slideAmounts[i]) * x;
+      const posY = centerY + (baseOffset + slideAmounts[i]) * y;
+
+      roundRect(ctx, posX, posY, smallRectW, smallRectH, 5);
+      ctx.stroke();
+    });
+
+  } else {
+    slideAmount = 0;
+    slideAmounts = smallRects.map(() => 0);
+  }
+
+  requestAnimationFrame(draw);
+
+}
+
+window.addEventListener('load', () => {
+  const introSound = document.getElementById('intro-sound');
+  if (introSound) {
+    introSound.play().catch(err => {
+      console.warn('Autoplay blocked:', err);
+      // You can optionally silently ignore or show a message here
+    });
+  }
+});
+
+
+// Start everything
+setup();
+draw();
+
+// Show main content after ~3 seconds
+setTimeout(() => {
+  const canvasEl = document.getElementById('animation-canvas');
+  canvasEl.classList.add('fade-out');
+  
+  setTimeout(() => {
+    canvasEl.style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  }, 1000); 
+}, 1000);
+
+  function updateDigitalTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    document.getElementById('digital-time').textContent = `${hours}:${minutes}`;
+  }
+  setInterval(updateDigitalTime, 1000);
+  updateDigitalTime();
+
+    function updateDate() {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    document.getElementById('date-display').textContent = `${month}/${day}`;
+  }
+
+  // Run once on load
+  updateDate();
+
+</script>
