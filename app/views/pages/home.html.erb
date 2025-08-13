@@ -2,7 +2,7 @@
 
 <div id="main-content" style="display:none;">
 
-  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 10px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light', sans-serif; font-weight: bold;">
+  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 10px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light'; font-weight: bold;">
     <!-- Left group -->
     <ul class="nav-text" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;">
       <li style="color: #ffffff; font-weight: bold; line-height: 70px;">User</li>
@@ -23,7 +23,7 @@
 <header class="site-header">
   <%= link_to about_path, style: "text-decoration: none; color: inherit; display: block;" do %>
     <section id="about" class="intro-text" 
-      style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3; font-family: 'Copperplate Gothic Light', sans-serif; cursor: pointer;">
+      style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3; font-family: 'Copperplate Gothic Light'; cursor: pointer;">
       
       <!-- Headshot -->
       <div>
@@ -46,7 +46,7 @@
 
 
       <section id="about" class="intro-text" 
-        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light', sans-serif;">
+        style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
 
         <!-- Projects -->
         <div style="flex: 1; border: 2px solid black; background-color: #D3D3D3; display: flex; justify-content: center; align-items: center; height: 100%;">
@@ -63,10 +63,10 @@
             <span>View Resume</span>
           <% end %>
 
-        <!-- Download button -->
+        <!-- View and Download button -->
         <div style="position: absolute; bottom: 10px; right: 10px;">
           <%= link_to "/Andrew-Resume.pdf", download: "Andrew-Resume.pdf", style: "height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;" do %>
-            <%= image_tag("downloadIcon.png", alt: "Download Resume", style: "height: 100%; width: 100%; object-fit: contain;") %>
+            <i class="fa-solid fa-download" style="color: black;"></i>
           <% end %>
         </div>
 
@@ -77,13 +77,15 @@
 
 
       <header class="site-header" style="padding-top: 5px; font-family: 'Copperplate Gothic Light', sans-serif;">
-        <section id="about" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3;">
+        <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: block;" do %>
+        <section id="" class="intro-text" style="display: flex; align-items: center; gap: 0px; max-width: 1150px; margin: 0 auto; padding: 0px; border: 2px solid black; background-color: #E3E3E3;">
           <!-- Phone -->
-          <div >
-            <div style="flex-shrink: 0; width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #E3E3E3;">
-                <%= image_tag("phone.webp", alt: "Phone", style: "width: 316px; height: 316px; object-fit: cover; border: 1px solid black; display: block; background-color: #D3D3D3;") %>
+          <div>
+            <div style="flex-shrink: 0; width: 316px; height: 316px; border: 1px solid black; display: flex; justify-content: center; align-items: center; background-color: #D3D3D3;">
+              <i class="fa-regular fa-id-card" style="font-size: 150px;"></i>
             </div>
           </div>
+
           <!-- About text -->
           <div style="flex: 1;">
             <p>
@@ -93,6 +95,7 @@
             </p>
           </div>
         </section>
+        <% end %>
       </header>
 
       <main>
@@ -148,7 +151,7 @@
 <style>
   .container {
 
-    font-family: "Copperplate Gothic Light", sans-serif;
+    font-family: "Copperplate Gothic Light";
   }
 
 body, html {
@@ -205,17 +208,26 @@ body {
     color: #666;
   }
 
+  .download-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+  }
+
   .intro-text {
   
-  margin-top: 1rem;
+  margin-top: 0rem;
   font-size: 1rem;
   font-weight: 800;
+  font-family: 'Copperplate Gothic Light'
   opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 0.5s;
   padding: 5px;
-  padding-top: 40px;
+  
 }
 
 @media (min-width: 1024px) {
@@ -226,7 +238,7 @@ body {
 }
 
 .highlight-name {
-  color: #F54927; /* Orange */
+  color: red; /* Red */
 }
 
 /* Fade in/up */
