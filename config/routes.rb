@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "pages/home"
   get "pages/about"
   get "pages/contact"
+  get "pages/projects"
   resources :expenses
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   # config/routes.rb
   get "/about", to: "pages#about"
   get "/contact", to: "pages#contact"
+  get "/projects", to: "pages#projects"
 
     # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
     # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
