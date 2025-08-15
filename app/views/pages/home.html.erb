@@ -20,7 +20,7 @@
 
 <header class="site-header" style="padding-top: 30px; font-family: 'Copperplate Gothic Light', sans-serif;">
   <%= link_to about_path, style: "text-decoration: none; color: inherit; display: block;" do %>
-    <section class="intro-text" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
+    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
       
       <!-- Left (big ombre box with icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
@@ -29,7 +29,9 @@
 
       <!-- Right (smaller box inside, shifted left) -->
       <div style="width: 831px; height: 310px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
-        <div class="intro-text">
+        <span class="corner bottom-left"></span>
+        <span class="corner bottom-right"></span>
+        <div class="intro-text" style="font-family: 'Orbitron', sans-serif;">
           I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
         </div>
       </div>
@@ -38,23 +40,35 @@
   <% end %>
 </header>
 
-<section id="about" class="intro-text" 
-  style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
+<section class="intro-text" style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
 
   <!-- Projects -->
-  <%= link_to projects_path, style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%);
- display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %>
-    <div class="intro-text">
+  <%= link_to projects_path, class: "corner-hover", style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %>
+    <span class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: 4rem; margin-bottom: 50px;">
       PROJECTS
-    </div>
+    </span>
   <% end %>
 
   <!-- Resume -->
-  <div style="flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%);
- display: flex; justify-content: center; align-items: center; height: 100%; position: relative;">
-    <%= link_to "/Andrew-Resume.pdf", target: "_blank", style: "display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; text-decoration: none; color: inherit;" do %>
-      <span>View Resume</span>
+  <div class="corner-hover" style="font-family: 'Orbitron', sans-serif; flex: 1; border: 2px solid black; 
+      background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); 
+      display: flex; justify-content: center; align-items: center; height: 100%; position: relative; flex-direction: column;">
+
+    <%= link_to "/Andrew-Resume.pdf", target: "_blank", style: "display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;" do %>
+      
+    <!-- Text in a white box -->
+    <div style="background-color: white; padding: 10px 20px; margin-bottom: 150px; font-weight: bold; font-size: 2.5rem; text-align: center; border: 1px solid black;">
+      DS Download Resume
+    </div>
+
+
+      <!-- Paper icon below text -->
+      <i class="fa-regular fa-file" style="font-size: 100px; margin-top: -80px"></i>
     <% end %>
+
+    <!-- Bottom corners for corner-hover -->
+    <span class="corner bottom-left"></span>
+    <span class="corner bottom-right"></span>
 
     <!-- Download button -->
     <div style="position: absolute; bottom: 10px; right: 10px;">
@@ -69,7 +83,7 @@
 
 <header class="site-header" style="padding-top: 5px; font-family: 'Copperplate Gothic Light', sans-serif;">
   <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: block;" do %>
-    <section class="intro-text" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
+    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
       
       <!-- Left (big ombre box with icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
@@ -78,8 +92,9 @@
 
       <!-- Right (smaller box inside, shifted left) -->
       <div style="width: 834px; height: 310px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
-        <div class="intro-text">
-          Contact Me
+        <span></span>
+        <div class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: 3rem;">
+          Start Contacting Me
         </div>
       </div>
 
@@ -87,46 +102,14 @@
   <% end %>
 </header>
 
-<i class="fa-solid fa-sun" style="color: #FFD700; font-size: 50px;"></i>
+  <div class="bottom-icons">
+    <i class="fa-solid fa-sun"></i>
+    <i class="fa-solid fa-clock"></i>
+  </div>
 
-<i class="fa-solid fa-clock" style="color: gray; font-size: 50px;"></i>
-
-
-      <main>
-
-
-          <section id="resume">
-          <h2>Resume</h2>
-          <p>
-              <a href="/Andrew Smith-Resumepdf.pdf" target="_blank">View My Resume (PDF)</a>
-          </p>
-          </section>
-
-        <section class="intro-text" style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <a>
-              <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
-            </a>
-            <a>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
-            </a>
-        </section>
-
-          <section id="contact">
-          <h2>Contact</h2>
-          <p>Feel free to reach out via email or connect on LinkedIn.</p>
-          <ul>
-              <li>Email: <a href="mailto:smithdrew867@gmail.com">smithdrew867@gmail.com</a></li>
-              <li>LinkedIn: <a href="https://www.linkedin.com/in/andrew-smith-ba4563251" target="_blank">www.linkedin.com/in/andrew-smith-ba4563251</a></li>
-              <li>GitHub: <a href="https://github.com/Andrew-Jayden-Smith" target="_blank">github.com/Andrew-Jayden-Smith</a></li>
-          </ul>
-          </section>
-      </main>
-
-      <footer>
-          <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
-      </footer>
-
-
+  <footer>
+    <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+  </footer>
 
 </div>
 
@@ -136,22 +119,74 @@
     font-family: "Copperplate Gothic Light";
   }
 
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+  body, html {
+    height: 100%;
+  }
 
+  body {
+    /* Light gray background with grid lines */
+    background-color: #f0f0f0;
+    background-image:
+      linear-gradient(to right, #ccc 1px, transparent 1px),
+      linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 280px 280px; /* size of each grid cell */
+    background-repeat: repeat;
+  }
 
+  .corner-hover {
+    position: relative;
+  }
 
-body {
-  /* Light gray background with grid lines */
-  background-color: #f0f0f0;
-  background-image:
-    linear-gradient(to right, #ccc 1px, transparent 1px),
-    linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: 280px 280px; /* size of each grid cell */
-}
+  /* All corner pieces share these styles */
+  .corner-hover::before,
+  .corner-hover::after,
+  .corner-hover span::before,
+  .corner-hover span::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* length of L arms */
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    border-color: rgba(65,97,121,255);
+    border-style: solid;
+  }
+
+  /* Top-left */
+  .corner-hover::before {
+    top: 0;
+    left: 0;
+    border-width: 4px 0 0 4px;
+  }
+
+  /* Top-right */
+  .corner-hover::after {
+    top: 0;
+    right: 0;
+    border-width: 4px 4px 0 0;
+  }
+
+  /* Bottom-left */
+  .corner-hover span::before {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 4px 4px;
+  }
+
+  /* Bottom-right */
+  .corner-hover span::after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 4px 4px 0;
+  }
+
+  /* Hover makes all corners visible */
+  .corner-hover:hover::before,
+  .corner-hover:hover::after,
+  .corner-hover:hover span::before,
+  .corner-hover:hover span::after {
+    opacity: 1;
+  }
 
   .site-header {
     text-align: center;
@@ -166,6 +201,7 @@ body {
     gap: 1.5rem;
     padding: 0;
     color: #000000;
+    font-family: 'Orbitron', sans-serif;
   }
   
   .navbar a {
@@ -175,6 +211,7 @@ body {
     font-weight: 800;
     text-decoration: none;
     color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
   }
 
   section {
@@ -221,6 +258,32 @@ body {
 
 .highlight-name {
   color: red; /* Red */
+}
+
+.bottom-icons {
+  position: relative;      
+  bottom: -50px;        
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1200px;
+  padding: 0 20px;     
+  align-items: center;
+  z-index: 100;      
+}
+
+.bottom-icons i {
+  font-size: 50px;
+  color: gray;          
+}
+
+.bottom-icons i.fa-sun {
+  color: #FFD700;
+}
+
+.bottom-icons i.fa-clock {
+  color: gray;
 }
 
 /* Fade in/up */
