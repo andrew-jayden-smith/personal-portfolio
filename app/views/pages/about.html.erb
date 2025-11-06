@@ -1,8 +1,30 @@
-<section id="about" class="intro-text">
-    <p>
+<section id="about" style="font-family: 'Orbitron', sans-serif; max-width: 800px; margin: 0 auto; padding: 40px; text-align: center; position: relative;">
+
+    <!-- Back Arrow (top-left) -->
+    <a href="javascript:history.back()" style="position: absolute; top: 20px; left: 20px; text-decoration: none; color: black; font-size: 70px;">
+        &#8592;
+    </a>
+
+    <%= image_tag("Landscape.png", alt: "Headshot", style: "width: 500px; height: 400px; object-fit: cover; border: 2px solid black; display: block; margin: 0 auto 30px auto;") %>
+
+    <p style="font-size: 20px; line-height: 1.6; margin-bottom: 20px;">
         I'm a software developer with a strong focus on building clean and efficient solutions. I enjoy working across the full stack — from creating user interfaces to designing backend systems. My experience spans web development, software architecture, cybersecurity, through technologies.
     </p>
-    <p>
+    <p style="font-size: 20px; line-height: 1.6;">
         Whether working solo or collaborating on a team, I approach each project with a problem-solving mindset to continually improve.
     </p>
 </section>
+
+
+
+<style>
+      body {
+    /* Light gray background with grid lines */
+    background-color: #f0f0f0;
+    background-image:
+      linear-gradient(to right, #ccc 1px, transparent 1px),
+      linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 280px 280px; /* size of each grid cell */
+    background-repeat: repeat;
+  }
+</style>
