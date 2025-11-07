@@ -2,7 +2,7 @@
 
 <div id="main-content" style="display:none;">
 
-  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 10px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light'; font-weight: bold;">
+  <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light'; font-weight: bold;">
     <!-- Left group -->
     <ul class="nav-text" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;">
       <li style="color: #ffffff; font-weight: bold; line-height: 70px;">User</li>
@@ -18,17 +18,17 @@
     </ul>
   </nav>
 
-<header class="site-header" style="padding-top: 30px; font-family: 'Copperplate Gothic Light', sans-serif;">
-  <%= link_to about_path, style: "text-decoration: none; color: inherit; display: block;" do %>
-    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
+<header class="site-header" style="margin-top: 70px;">
+  <%= link_to about_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %>
+    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1140px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 275px;">
       
       <!-- Left (big ombre box with icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 310px; height: 310px; object-fit: cover; border: 1px solid black; display: block; margin-left: 4px;") %>
+        <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 265px; height: 265px; object-fit: cover; border: 1px solid black; display: block; margin-left: 5px;") %>
       </div>
 
       <!-- Right (smaller box inside, shifted left) -->
-      <div style="width: 831px; height: 310px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
+      <div style="width: 831px; height: 265px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
         <span class="corner bottom-left"></span>
         <span class="corner bottom-right"></span>
         <div class="intro-text" style="font-family: 'Orbitron', sans-serif;">
@@ -40,7 +40,7 @@
   <% end %>
 </header>
 
-<section class="intro-text" style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1154px; height: 320px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
+<section class="intro-text" style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1113px; height: 273px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
 
   <!-- Projects -->
   <%= link_to projects_path, class: "corner-hover", style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %>
@@ -81,9 +81,9 @@
 
 
 
-<header class="site-header" style="padding-top: 5px; font-family: 'Copperplate Gothic Light', sans-serif;">
-  <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: block;" do %>
-    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1150px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 320px;">
+<header class="site-header">
+  <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: block; width: 1118px; padding-left: 171px" do %>
+    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1110px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 273px; width: 100%;">
       
       <!-- Left (big ombre box with icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
@@ -91,7 +91,7 @@
       </div>
 
       <!-- Right (smaller box inside, shifted left) -->
-      <div style="width: 834px; height: 310px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
+      <div style="width: 834px; height: 270px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
         <span></span>
         <div class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: rem;">
           Start Contacting Me
@@ -115,12 +115,13 @@
 
 <style>
   .container {
-
     font-family: "Copperplate Gothic Light";
   }
 
   body, html {
     height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   body {
@@ -131,6 +132,7 @@
       linear-gradient(to bottom, #ccc 1px, transparent 1px);
     background-size: 280px 280px; /* size of each grid cell */
     background-repeat: repeat;
+    background-position: 800px 0;
   }
 
   .corner-hover {
@@ -191,7 +193,7 @@
   .site-header {
     text-align: center;
     padding: 5px;
-    padding-top: 40px;
+    font-family: 'Copperplate Gothic Light', sans-serif;
   }
 
   .navbar ul {
@@ -547,5 +549,16 @@ setTimeout(() => {
 
   // Run once on load
   updateDate();
+
+  function alignGrid() {
+    const contentWidth = 1120;
+    const screenWidth = window.innerWidth;
+    const offset = Math.max((screenWidth - contentWidth) / 2, 0);
+    document.body.style.backgroundPosition = `${offset}px -135px`;
+  }
+
+  window.addEventListener('resize', alignGrid);
+  window.addEventListener('load', alignGrid);
+
 
 </script>
