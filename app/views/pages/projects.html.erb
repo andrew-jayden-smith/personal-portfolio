@@ -1,14 +1,77 @@
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <strong>Personal Portfolio (Rails)</strong>: A custom-built site to showcase my work and skills.
-        </li>
-        <li>
-            <strong>RocketLabs (Unity)</strong>: A rocket simulation game with customizable rockets and physics-based launch.
-        </li>
-        <li>
-            <strong>CTF Writeups</strong>: A collection of cybersecurity challenges I've solved and documented.
-        </li>
-    </ul>
+<section id="projects" style="font-family: 'Orbitron', sans-serif; max-width: 900px; margin: 60px auto; padding: 60px; text-align: center; position: relative; background: rgba(255,255,255,0.8); border-radius: 0px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+  <!-- Back Arrow (top-left) -->
+  <a href="javascript:history.back()" 
+     style="position: absolute; top: 25px; left: 25px; text-decoration: none; color: black; font-size: 60px; line-height: 1;">
+      &#8592;
+  </a>
+
+  <!-- Page Header -->
+  <h1 style="font-size: 42px; margin-bottom: 40px; letter-spacing: 3px;">Projects</h1>
+
+  <!-- Image -->
+  <%= image_tag("Landscape.png", alt: "Landscape", 
+    style: "width: 100%; max-width: 600px; height: auto; border: 3px solid black; border-radius: 0px; display: block; margin: 0 auto 50px auto;") %>
+
+  <!-- Projects List -->
+  <ul style="list-style: none; padding: 0; text-align: left; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+    <li style="margin-bottom: 25px;">
+      <strong>Personal Portfolio (Rails)</strong><br>
+      A custom-built site showcasing my development work and skills.
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>RocketLabs (Unity)</strong><br>
+      A rocket simulation game with customizable rockets and realistic launch physics.
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Study Abroad (ASP.NET)</strong><br>
+      Recruitment website connecting international students with universities in the U.S.
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>Patient Medical Portal (ASP.NET)</strong><br>
+      A secure patient portal for viewing appointments and chatting with doctors.
+    </li>
+    <li style="margin-bottom: 25px;">
+      <strong>CTF Writeups</strong><br>
+      A collection of cybersecurity challenges I’ve solved and documented.
+    </li>
+  </ul>
 </section>
+
+<style>
+  body {
+    background-color: #f0f0f0;
+    background-image:
+      linear-gradient(to right, #ccc 1px, transparent 1px),
+      linear-gradient(to bottom, #ccc 1px, transparent 1px);
+    background-size: 280px 280px;
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  #projects strong {
+    color: #000;
+    font-size: 18px;
+  }
+
+  #projects li {
+    font-size: 16px;
+    color: #333;
+  }
+
+  @media (max-width: 768px) {
+    #projects {
+      padding: 30px;
+      margin: 20px;
+    }
+
+    #projects h1 {
+      font-size: 32px;
+    }
+
+    #projects ul {
+      font-size: 15px;
+    }
+  }
+</style>
