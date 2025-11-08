@@ -18,7 +18,14 @@
     </ul>
   </nav>
 
-<header class="site-header" style="margin-top: 70px;">
+<div id="small-grid-overlay">
+  <div id="clock-container" style="width: 746.4px; height: 746.4px; position: absolute; top: 20px; right: 20px;">
+
+  </div>
+</div>
+
+
+<header class="site-header" style="margin-top: 0px;">
   <%= link_to about_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %>
     <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1140px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 275px;">
       
@@ -82,25 +89,37 @@
 
 
 <header class="site-header">
-  <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: block; width: 1118px; padding-left: 171px" do %>
-    <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1110px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 273px; width: 100%;">
+  <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %>
+    <section class="corner-hover" 
+             style="display: flex; align-items: center; gap: 0; 
+                    max-width: 1138px; margin: 0 auto; padding: 0; 
+                    border: 2px solid black; 
+                    background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); 
+                    height: 273px; width: 100%;">
       
-      <!-- Left (big ombre box with icon) -->
+      <!-- Left (icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <i class="fa-regular fa-id-card" style="font-size: 150px;"></i>
+        <i class="fa-regular fa-id-card" style="font-size: 150px; padding: 50px"></i>
       </div>
 
-      <!-- Right (smaller box inside, shifted left) -->
-      <div style="width: 834px; height: 270px; border: 1px solid black; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; margin-right: 4px;">
-        <span></span>
-        <div class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: rem;">
+      <!-- Right -->
+      <div style="width: 832px; height: 260px; border: 1px solid black; 
+                  background-color: #f0f0f0; display: flex; 
+                  justify-content: center; align-items: center; margin-right: 4px;">
+        <div class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: 2rem;">
           Start Contacting Me
         </div>
       </div>
 
+      <!-- ✅ Add these two spans for hover corners -->
+      <span class="corner bottom-left"></span>
+      <span class="corner bottom-right"></span>
+
     </section>
   <% end %>
 </header>
+
+
 
   <div class="bottom-icons">
     <i class="fa-solid fa-sun"></i>
@@ -204,6 +223,8 @@
     padding: 0;
     color: #000000;
     font-family: 'Orbitron', sans-serif;
+    position: relative;  /* or sticky/fixed if desired */
+    z-index: 100;
   }
   
   .navbar a {
@@ -305,13 +326,39 @@
   opacity: 0;
 }
 
+#small-grid-overlay {
+  position: relative;        /* Stays on screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 910px;
+  pointer-events: none;   /* Clicks go through */
+  z-index: 200;            /* Above background, below content if needed */
+  
+  background-image:
+    linear-gradient(to right, rgba(200,200,200,1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(200,200,200,1) 1px, transparent 1px);
+  background-size: 93.3px 93.3px;  /* Size of smaller cells */
+}
+
+#clock-container {
+  position: absolute;
+  top: 20px;   /* adjust vertical position */
+  right: 20px; /* adjust horizontal position */
+  width: 746.4px;
+  height: 746.4px;
+  pointer-events: auto; /* allows hover if needed */
+}
+
 </style>
+
 
 <audio id="intro-sound" preload="auto">
   <source src="<%= asset_path('nintendo_ds_intro.mp3') %>" type="audio/mpeg">
 </audio>
 
 <script>
+
 const canvas = document.getElementById('animation-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -559,6 +606,17 @@ setTimeout(() => {
 
   window.addEventListener('resize', alignGrid);
   window.addEventListener('load', alignGrid);
+
+  
+  function alignSmallGrid() {
+  const contentWidth = 1120;
+  const screenWidth = window.innerWidth;
+  const offset = Math.max((screenWidth - contentWidth) / 2, 0);
+  document.getElementById('small-grid-overlay').style.backgroundPosition = `${offset - 1.5}px -112px`;
+  }
+
+  window.addEventListener('resize', alignSmallGrid);
+  window.addEventListener('load', alignSmallGrid);
 
 
 </script>
