@@ -1,7 +1,5 @@
 <canvas id="animation-canvas" width="1920" height="1080" style="display: block; background: white;"></canvas>
-
-<div id="main-content" style="display:none;">
-
+<div class="page-container">
   <nav class="navbar" style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background-color: #7192A2; height: 70px; font-family: 'Copperplate Gothic Light'; font-weight: bold;">
     <!-- Left group -->
     <ul class="nav-text" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;">
@@ -18,6 +16,10 @@
       </li>
     </ul>
   </nav>
+
+<div id="main-content" style="display:none;">
+
+
 
 <!--
 <div id="small-grid-overlay">
@@ -52,54 +54,76 @@
   </a>
 </header>
 
-<section class="intro-text" style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1113px; height: 273px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
+<section class="intro-text" style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 5px;  /* gap between boxes */ 
+    height: 273px; 
+    margin: 0 auto; 
+    padding: 0; 
+    background-color: #f0f0f0; 
+    font-family: 'Copperplate Gothic Light';
+">
 
   <!-- Projects -->
-  <a href="projects.html" class="corner-hover" style="flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;">
-   <!-- Your content goes here -->
-
-  <!-- <%= link_to projects_path, class: "corner-hover", style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %> -->
-
+  <a href="projects.html" class="corner-hover" style="
+      flex: 0 0 calc(50% - 2.5px);  /* half width minus half the gap */
+      border: 2px solid black; 
+      background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100%; 
+      text-decoration: none; 
+      color: inherit; 
+      position: relative;
+  ">
     <span class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: 4rem; margin-bottom: 50px;">
       PROJECTS
     </span>
-  <!-- <% end %> -->
   </a>
 
   <!-- Resume -->
-  <div class="corner-hover" style="font-family: 'Orbitron', sans-serif; flex: 1; border: 2px solid black; 
+  <div class="corner-hover" style="
+      flex: 0 0 calc(50% - 2.5px);  /* half width minus half the gap */
+      border: 2px solid black; 
       background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); 
-      display: flex; justify-content: center; align-items: center; height: 100%; position: relative; flex-direction: column;">
-
-    <a href="Resume-Drew-PortfolioPDF.pdf" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;">
-
-    <!-- <%= link_to "/Resume-Drew-PortfolioPDF.pdf", target: "_blank", style: "display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;" do %> -->
-      
-    <!-- Text in a white box -->
-    <div style="background-color: white; padding: 10px 20px; margin-bottom: 150px; font-weight: bold; font-size: 2.5rem; text-align: center; border: 1px solid black;">
-      DS Download Resume
-    </div>
-
-      <!-- Paper icon below text -->
-      <i class="fa-regular fa-file" style="font-size: 100px; margin-top: -80px"></i>
-    <!-- <% end %> -->
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100%; 
+      position: relative; 
+      flex-direction: column;
+  ">
+    <a href="Resume-Drew-PortfolioPDF.pdf" target="_blank" style="
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-decoration: none; 
+        color: inherit; 
+        gap: 20px;
+    ">
+      <div style="background-color: white; padding: 10px 20px; font-weight: bold; font-size: 2.5rem; text-align: center; border: 1px solid black;">
+        DS Download Resume
+      </div>
+      <i class="fa-regular fa-file" style="font-size: 100px;"></i>
     </a>
-
-    <!-- Bottom corners for corner-hover -->
     <span class="corner bottom-left"></span>
     <span class="corner bottom-right"></span>
-
-    <!-- Download button -->
     <div style="position: absolute; bottom: 10px; right: 10px;">
-      <a href="Resume-Drew-PortfolioPDF.pdf" download="Resume-Drew.pdf" style="height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;">
-
-      <!-- <%= link_to "/Resume-Drew-PortfolioPDF.pdf", download: "Resume-Drew.pdf", style: "height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;" do %> -->
+      <a href="Resume-Drew-PortfolioPDF.pdf" download="Resume-Drew.pdf" style="
+          height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; 
+          display: flex; justify-content: center; align-items: center;">
         <i class="fa-solid fa-download" style="color: black;"></i>
-      <!-- <% end %> -->
       </a>
     </div>
   </div>
+
 </section>
+
+
 
 
 
@@ -152,6 +176,7 @@
     <p>&copy; 2025 Andrew Smith. All rights reserved.</p>
   </footer>
 
+</div>
 </div>
 
 <style>
@@ -236,6 +261,26 @@
     padding: 5px;
     font-family: 'Copperplate Gothic Light', sans-serif;
   }
+
+  .page-container {
+    min-width: 1140px; /* match your widest box */
+  }
+
+  .navbar {
+    width: 100%;
+    min-width: inherit; /* stretches with the container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #7192A2;
+    box-sizing: border-box;
+    position: relative; /* normal flow */
+    z-index: 100;
+  }
+
+
+
 
   .navbar ul {
     display: flex;
@@ -371,6 +416,17 @@
   height: 746.4px;
   pointer-events: auto; /* allows hover if needed */
 }
+
+section.intro-text {
+  width: 1105px; /* fix the width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 273px;
+}
+
 
 </style>
 
@@ -640,5 +696,5 @@ setTimeout(() => {
   window.addEventListener('resize', alignSmallGrid);
   window.addEventListener('load', alignSmallGrid);
 
-
 </script>
+
