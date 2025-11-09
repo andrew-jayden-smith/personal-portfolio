@@ -13,7 +13,8 @@
       <li id="digital-time" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
       <li id="date-display" style="font-weight: bold; font-size: 1.6rem; color:#ffffff; line-height: 70px;"></li>
       <li>
-        <%= image_tag("battery.png", alt: "Battery", style: "width: 40px; height: 40px; object-fit: contain;") %>
+        <!-- <%= image_tag("battery.png", alt: "Battery", style: "width: 40px; height: 40px; object-fit: contain;") %> -->
+        <img src="battery.png" alt="Battery" style="width: 40px; height: 40px; object-fit: contain;">
       </li>
     </ul>
   </nav>
@@ -27,12 +28,14 @@
 -->
 
 <header class="site-header" style="margin-top: 70px;">
-  <%= link_to about_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %>
+  <a href="about.html" style="text-decoration: none; color: inherit; display: inline-block;">
+  <!-- Ruby logic changed to html for hosting <%= link_to about_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %> -->
     <section class="corner-hover" style="display: flex; align-items: center; gap: 0; max-width: 1140px; margin: 0 auto; padding: 0; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); height: 275px;">
       
       <!-- Left (big ombre box with icon) -->
       <div style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 265px; height: 265px; object-fit: cover; border: 1px solid black; display: block; margin-left: 5px;") %>
+        <img src="Headshot.JPG" alt="Headshot" style="width: 265px; height: 265px; object-fit: cover; border: 1px solid black; display: block; margin-left: 5px;">
+        <!-- Ruby logic changed to html for hosting <%= image_tag("Headshot.JPG", alt: "Headshot", style: "width: 265px; height: 265px; object-fit: cover; border: 1px solid black; display: block; margin-left: 5px;") %> -->
       </div>
 
       <!-- Right (smaller box inside, shifted left) -->
@@ -40,39 +43,47 @@
         <span class="corner bottom-left"></span>
         <span class="corner bottom-right"></span>
         <div class="intro-text" style="font-family: 'Orbitron', sans-serif;">
-          I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that’s easy to maintain.
+          I'm <span class="highlight-name">Drew Smith.</span> Take a look around. I value simplicity, thoughtful design, and writing code that's easy to maintain.
         </div>
       </div>
 
     </section>
-  <% end %>
+  <!--<% end %> -->
+  </a>
 </header>
 
 <section class="intro-text" style="display: flex; justify-content: center; align-items: center; gap: 5px; max-width: 1113px; height: 273px; margin: 0 auto; padding: 0; background-color: #f0f0f0; font-family: 'Copperplate Gothic Light';">
 
   <!-- Projects -->
-  <%= link_to projects_path, class: "corner-hover", style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %>
+  <a href="projects.html" class="corner-hover" style="flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;">
+   <!-- Your content goes here -->
+
+  <!-- <%= link_to projects_path, class: "corner-hover", style: "flex: 1; border: 2px solid black; background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); display: flex; justify-content: center; align-items: center; height: 100%; text-decoration: none; color: inherit; position: relative;" do %> -->
+
     <span class="intro-text" style="font-family: 'Orbitron', sans-serif; font-size: 4rem; margin-bottom: 50px;">
       PROJECTS
     </span>
-  <% end %>
+  <!-- <% end %> -->
+  </a>
 
   <!-- Resume -->
   <div class="corner-hover" style="font-family: 'Orbitron', sans-serif; flex: 1; border: 2px solid black; 
       background: linear-gradient(to bottom, white 30%, #D3D3D3 100%); 
       display: flex; justify-content: center; align-items: center; height: 100%; position: relative; flex-direction: column;">
 
-    <%= link_to "/Resume-Drew-PortfolioPDF.pdf", target: "_blank", style: "display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;" do %>
+    <a href="Resume-Drew-PortfolioPDF.pdf" target="_blank" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;">
+
+    <!-- <%= link_to "/Resume-Drew-PortfolioPDF.pdf", target: "_blank", style: "display: flex; flex-direction: column; justify-content: center; align-items: center; text-decoration: none; color: inherit;" do %> -->
       
     <!-- Text in a white box -->
     <div style="background-color: white; padding: 10px 20px; margin-bottom: 150px; font-weight: bold; font-size: 2.5rem; text-align: center; border: 1px solid black;">
       DS Download Resume
     </div>
 
-
       <!-- Paper icon below text -->
       <i class="fa-regular fa-file" style="font-size: 100px; margin-top: -80px"></i>
-    <% end %>
+    <!-- <% end %> -->
+    </a>
 
     <!-- Bottom corners for corner-hover -->
     <span class="corner bottom-left"></span>
@@ -80,9 +91,12 @@
 
     <!-- Download button -->
     <div style="position: absolute; bottom: 10px; right: 10px;">
-      <%= link_to "/Resume-Drew-PortfolioPDF.pdf", download: "Resume-Drew.pdf", style: "height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;" do %>
+      <a href="Resume-Drew-PortfolioPDF.pdf" download="Resume-Drew.pdf" style="height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;">
+
+      <!-- <%= link_to "/Resume-Drew-PortfolioPDF.pdf", download: "Resume-Drew.pdf", style: "height: 40px; width: 40px; padding: 0; border-radius: 0; text-decoration: none; display: flex; justify-content: center; align-items: center;" do %> -->
         <i class="fa-solid fa-download" style="color: black;"></i>
-      <% end %>
+      <!-- <% end %> -->
+      </a>
     </div>
   </div>
 </section>
@@ -90,7 +104,9 @@
 
 
 <header class="site-header">
-  <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %>
+  <a href="contact.html" style="text-decoration: none; color: inherit; display: inline-block;">
+
+  <!-- <%= link_to contact_path, style: "text-decoration: none; color: inherit; display: inline-block;" do %> -->
     <section class="corner-hover" 
              style="display: flex; align-items: center; gap: 0; 
                     max-width: 1138px; margin: 0 auto; padding: 0; 
@@ -117,7 +133,8 @@
       <span class="corner bottom-right"></span>
 
     </section>
-  <% end %>
+  <!-- <% end %> -->
+  </a>
 </header>
 
 
@@ -126,9 +143,13 @@
     <i class="fa-solid fa-sun"></i>
     <i class="fa-solid fa-clock"></i>
   </div>
-
+<!--
   <footer>
     <p>&copy; <%= Time.current.year %> Andrew Smith. All rights reserved.</p>
+  </footer>
+  -->
+  <footer>
+    <p>&copy; 2025 Andrew Smith. All rights reserved.</p>
   </footer>
 
 </div>
